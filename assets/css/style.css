@@ -1,0 +1,367 @@
+  /* ==========FONT========== */
+  @font-face {
+    font-family: roboto-bold;
+    src: url(../fonts/roboto/Roboto-Bold.ttf);
+  }
+
+  @font-face {
+    font-family: roboto-reg;
+    src: url(../fonts/roboto/Roboto-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: courgette-reg;
+    src: url(../fonts/courgette/Courgette-Regular.ttf);
+  }
+
+  @font-face {
+    font-family: o_s_c-light;
+    src: url(../fonts/o_s_c/OpenSansCondensed-Light.ttf);
+  }
+  /* =====FONT===== */
+  
+
+  /* =====ALL===== */
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+  }
+  /* =====ALL===== */
+
+
+  /* ==========NAV-BAR========== */
+  .link-page {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: #fff
+  }
+
+  nav {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav .mainMenu {
+    display: flex;
+    list-style: none;
+  }
+
+  nav .mainMenu li a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+  }
+
+  nav .mainMenu li a:hover {
+    background: khaki;
+  }
+
+  nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+  }
+
+  nav .mainMenu .closeMenu , .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+  }
+
+  #social-menu {
+    color: #fff;
+  }
+
+  .fa-facebook:hover {color: #fff;}
+  .fa-instagram:hover {color: #fff;}
+
+  nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  @media(max-width: 800px){
+    nav .mainMenu {
+      height: 100vh;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 0;
+      z-index: 10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #000;
+      transition: top 1s ease;
+      display: none;
+    }
+
+    nav .mainMenu .closeMenu {
+      display: block;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+
+    }
+
+    nav .openMenu {
+      display: block;
+    }
+
+    nav .mainMenu li a:hover {
+      background: none;
+      color: khaki;
+      font-size: 1.6rem;
+    }
+
+    .icons i {
+      display: inline-block;
+      padding: 12px;
+    }
+  }
+  /* ==========NAV-BAR========== */
+
+
+  /* ==========LANDING-PAGE========== */
+  .bg-landing-page {
+    background-image: url(../img/mannequin/mannequin-senior.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100%;
+  }
+
+  .bloc-landing {
+    padding-top: 120px;
+    padding-left: 100px;
+  }
+
+  #title-landing {
+    font-family: courgette-reg;
+    font-size: 4rem;
+    color: #fff;
+    padding-bottom: 20px;
+  }
+
+  .text-landing {
+    font-family: roboto-reg;
+    font-size: 1rem;
+    color: #fff;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  /* ==========LANDING-PAGE========== */
+
+
+  /* =====TITLE===== */
+  #title-bloc {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-family: o_s_c-light;
+    text-shadow: 1px 1px grey;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  /* =====TITLE===== */
+
+
+  /* ==========SALON========== */
+  .section-salon {
+    background: linear-gradient(rgb(211, 199, 96), rgb(201, 153, 98));
+  }
+
+  .bloc-text-salon {
+    padding-top: 30px;
+  }
+
+  #title-salon {
+    color: #fff;
+    font-family: courgette-reg;
+  }
+
+  .text-position-salon {
+    color: #fff;
+    font-family: roboto-bold;
+  }
+
+  .text-salon {
+    color: #fff;
+    font-family: roboto-reg;
+  }
+  /* ==========SALON========== */
+
+
+  /* ==========HAIRCUT========== */
+  .hom{
+    font-family: roboto-bold;
+    margin-block-end: 1em;
+  }
+  /* ==========HAIRCUT========== */
+
+
+  /* ==========MAP========== */
+  .section-horaire {
+    background: linear-gradient(rgb(104, 104, 104), rgb(43, 43, 43));
+    margin-bottom: 2px;
+  }
+
+  .title-map {
+    color: #fff;
+    font-family: courgette-reg;
+    padding: 20px;
+  }
+  
+  .text-map {
+    color: #fff;
+    font-family: roboto-reg;
+    padding-top: 10px;
+  }
+  /* ==========MAP========== */
+
+
+  /* ==========CONTACT========== */
+  .section-contact {
+    background-color: rgb(36, 36, 36);
+  }
+
+  .border-bottom {
+    border-bottom: solid 1px #fff;
+  }
+
+  .bloc-1-contact {
+    text-align: center;
+  }
+
+  .title-foot {
+    color: khaki;
+    font-family: roboto-bold;
+    padding-top: 20px;
+  }
+
+  #social-foot {
+    color: #fff;
+    margin-top: 40px;
+    margin-left: 6px;
+    width: 20px;
+  }
+
+  .title-footer {
+    color: khaki;
+    font-family: roboto-bold;
+    padding-top: 30px;
+  }
+
+  .text-footer {
+    color: #fff;
+    font-family: roboto-reg;
+  }
+
+  .mail-link {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .text-copyright , .admin-link{
+    color: #fff;
+    text-decoration: none;
+  }
+  /* ==========CONTACT========== */
+
+
+
+  /* ==========ADMIN-CONNEXION========== */
+  .body-admin {
+    background-color: rgb(190, 217, 241);
+  }
+
+  .section-admin {
+    display: flex;
+    justify-content: center;
+  }
+
+  .block-admin {
+    background-color: rgb(250, 250, 250);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .title-admin-co {
+    color: rgb(8, 69, 148);
+    font-family: roboto-bold;
+    margin-top: 10px;
+  }
+
+  .icon-admin {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+  }
+
+  .input-pseudo {
+    margin: 10px;
+  }
+
+  .input-password {
+    margin: 10px;
+  }
+
+  .input-conf-password {
+    margin: 10px;
+  }
+
+  .input-co {
+    margin: 15px;
+    color: rgb(8, 69, 148)ue;
+  }
+  /* ==========ADMIN-CONNEXION========== */
+
+
+  /* ==========HAIRCUT-CRUD-MAN========== */
+  .cutman {
+    font-weight: bolder;
+    margin: 30px;
+  }
+
+  .table {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btn-updt {
+    margin: 4px;
+    background-color: cadetblue;
+    border-radius: 2px;
+    color: #fff;
+  }
+  
+  .btn-dlt {
+    margin: 4px;
+    background-color: rgb(211, 53, 53);
+    border-radius: 2px;
+    color: #fff;
+  }
+
+  .title-ad {
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+  /* ==========HAIRCUT-CRUD-MAN========== */
