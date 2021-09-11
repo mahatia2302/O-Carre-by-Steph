@@ -1,10 +1,11 @@
 <?php
 
     require('database/connexion_bdd.php'); // Database connection
-    include('class/classhaircut.php'); // Class
+    include('class/classhaircutman.php'); // Class man
 
+    // ==========MAN==========
     // Call a class
-    $dbhaircut = new dbhaircut();
+    $dbhaircutman = new dbhaircutman();
 
     // =========================
     // Button management
@@ -16,7 +17,7 @@
             $etat = "fermer";
             $id = $_POST['id_hair'];
 
-            $dbhaircut->deleteDbhaircut($id);
+            $dbhaircutman->deletedbhaircutman($id);
         }
 
 
@@ -34,7 +35,7 @@
             $new_prix = $_POST['new_prix'];
             $id_hair = $_POST['id_hair'];
 
-            $dbhaircut->updateDbhaircut($new_nom, $new_prix, $id_hair);
+            $dbhaircutman->updatedbhaircutman($new_nom, $new_prix, $id_hair);
         }
 
 
@@ -44,15 +45,17 @@
             $nom = $_POST['nom'];
             $prix = $_POST['prix'];
 
-            $dbhaircut->createDbhaircut($nom, $prix);
+            $dbhaircutman->createdbhaircutman($nom, $prix);
         }
-    } else {
+
+    } else{
 
         $etat = "fermer";
     }
 
     // Display my table
-    $res_haircut_man = $dbhaircut->getDbhaircut();
+    $res_haircut_man = $dbhaircutman->getdbhaircutman();
+    // ==========MAN==========
 
 ?>
 
@@ -219,6 +222,7 @@
             </h2>
         </div>
 
+        <!-- =====MEN===== -->
         <div class="row" style="justify-content: center;">
 
             <div class="col-md-7">
@@ -290,6 +294,7 @@
             </div>
             
         </div>
+        <!-- =====MEN===== -->
         <!-- ==========HAIRCUT========== -->
 
 
@@ -404,7 +409,7 @@
             </div>
 
             <div class="bloc-copyright" align="center">
-                <p class="text-copyright">Copyright @2021 | <a href="./admin/admin.php" class="admin-link">Admin</a> | Designed by MoH</p>
+                <p class="text-copyright">Copyright @2021 | <a href="admin/crud.php" class="admin-link">Admin</a> | Designed by MoH</p>
             </div>
         </div>
         <!-- ==========CONTACT========== -->
@@ -413,11 +418,9 @@
         <!-- ====================LINK==================== -->
         <!-- BOOTSTRAP-JS -->
         <script src="assets/js/bootstrap/js/bootstrap.min.js" async defer></script>
-        <script src="assets/js/bootstrap/js/bootstrap.bundle.min.js" async defer></script>
 
         <!-- JS -->
         <script src="assets/js/script.js" async defer></script>
-        <script src="assets/js/jquery.js" async defer></script>
         <!-- ====================LINK==================== -->
 
     </body>

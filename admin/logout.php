@@ -1,8 +1,14 @@
 <?php
 
-    session_start();
-    $_SESSION = array();
+session_start();
+
+if (isset($_SESSION['pseudo'])) {
     session_destroy();
-    header('Location: admin.php');
+
+    echo "<script>location.href='login.php'</script>";
+}
+else {
+    echo "<script>location.href='login.php'</script>";
+}
     
 ?>

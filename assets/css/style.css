@@ -288,28 +288,23 @@
 
 
   /* ==========ADMIN-CONNEXION========== */
-  .body-admin {
+  .body-login {
     background-color: rgb(190, 217, 241);
   }
 
-  .section-admin {
-    display: flex;
-    justify-content: center;
-  }
-
-  .block-admin {
+  .block-login {
     background-color: rgb(250, 250, 250);
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
   }
 
-  .title-admin-co {
+  .title-login-co {
     color: rgb(8, 69, 148);
     font-family: roboto-bold;
     margin-top: 10px;
   }
 
-  .icon-admin {
+  .icon-login {
     border-radius: 100%;
     height: 150px;
     width: 150px;
@@ -333,6 +328,50 @@
     color: rgb(8, 69, 148)ue;
   }
   /* ==========ADMIN-CONNEXION========== */
+
+  /* ==========ADMIN-PAGE========== */
+  .body-admini {
+    background-color: rgb(190, 217, 241);
+  }
+
+  .block-admini {
+    background-color: rgb(250, 250, 250);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+  }
+
+  .title-admini {
+    color: rgb(8, 69, 148);
+    font-family: roboto-bold;
+    margin-top: 10px;
+  }
+
+  .icon-admin {
+    border-radius: 100%;
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+  }
+
+  .link-crud-page {
+    text-decoration: none;
+    color: black;
+  }
+
+  .link-crud-page:hover {
+    color: rgb(29, 94, 110);
+  }
+
+  .link-disconect {
+    text-decoration: none;
+    color: black;
+    margin-top: 20px;
+  }
+
+  .link-disconect:hover {
+    color: rgb(131, 34, 34);
+  }
+  /* ==========ADMIN-PAGE========== */
 
 
   /* ==========HAIRCUT-CRUD-MAN========== */

@@ -1,10 +1,13 @@
 <?php
 
     require('../database/connexion_bdd.php'); // Database connection
-    include('../class/classhaircut.php'); // Class
+    include('../class/classhaircutman.php'); // Class man
+    
+    session_start();
 
+    // ==========MAN==========
     // Call a class
-    $dbhaircut = new dbhaircut();
+    $dbhaircutman = new dbhaircutman();
 
     // =========================
     // Button management
@@ -16,7 +19,7 @@
             $etat = "fermer";
             $id = $_POST['id_hair'];
 
-            $dbhaircut->deleteDbhaircut($id);
+            $dbhaircutman->deletedbhaircutman($id);
         }
 
 
@@ -34,7 +37,7 @@
             $new_prix = $_POST['new_prix'];
             $id_hair = $_POST['id_hair'];
 
-            $dbhaircut->updateDbhaircut($new_nom, $new_prix, $id_hair);
+            $dbhaircutman->updatedbhaircutman($new_nom, $new_prix, $id_hair);
         }
 
 
@@ -44,15 +47,17 @@
             $nom = $_POST['nom'];
             $prix = $_POST['prix'];
 
-            $dbhaircut->createDbhaircut($nom, $prix);
+            $dbhaircutman->createdbhaircutman($nom, $prix);
         }
-    } else {
+
+    } else{
 
         $etat = "fermer";
     }
 
     // Display my table
-    $res_haircut_man = $dbhaircut->getDbhaircut();
+    $res_haircut_man = $dbhaircutman->getdbhaircutman();
+    // ==========MAN==========
 
 ?>
 
@@ -96,32 +101,22 @@
             <ul class="mainMenu">
 
                 <li>
-                    <a href="../index.php#land-page">
-                        Accueil
-                    </a>
-                </li>
-                <li>
-                    <a href="../index.php#salon-page">
-                        Salon
-                    </a>
-                </li>
-                <li>
-                    <a href="../index.php#services">
-                        Services
-                    </a>
-                </li>
-                <li>
-                    <a href="../index.php#footer">
-                        Contact
-                    </a>
+                    <?php
+
+                        if (isset($_SESSION['pseudo'])){
+                       
+                            echo"<a href='admin.php'>Retour</a>";
+
+                        }else{
+
+                            echo "<script>location.href='login.php'</script>";
+
+                        }
+
+                    ?>
                 </li>
 
                 <div class="closeMenu"><i class="fa fa-times"></i></div>
-
-                <span class="icons">
-                    <i class="fab fa-facebook"></i>
-                    <i class="fab fa-instagram"></i>
-                </span>
 
             </ul>
 
@@ -130,12 +125,6 @@
 
         
         <!-- ==========HAIRCUT-CRUD-MAN========== -->
-        <div>
-            <h1>
-                
-            </h1>
-        </div>
-
         <div class="row" style="justify-content: center;">
 
             <h3 class="cutman" align="center">

@@ -2,7 +2,7 @@
 
     include __DIR__  .'/../database/connexion_bdd.php';
 
-    class Dbhaircut {
+    class dbhaircutman {
         
         /**
          * Delete haircut selected from "haircut"
@@ -10,7 +10,7 @@
          * @param int $id 
          *
          */
-        public function  deleteDbhaircut($id){
+        public function  deletedbhaircutman($id){
             
             global $connect_bdd; 
             
@@ -22,11 +22,11 @@
         
         
         /**
-         * Display Dbhaircut "haircut" 
+         * Display dbhaircutman "haircut" 
          *
          * @return $res_haircut_man
          */
-        public function getDbhaircut(){
+        public function getdbhaircutman(){
 
             global $connect_bdd; 
 
@@ -39,13 +39,13 @@
 
             
         /**
-         * Create Dbhaircut into "haircut"
+         * Create dbhaircutman into "haircut"
          *
          * @param string $nom
          * @param int $prix
          *
          */
-        public function createDbhaircut($nom,$prix){
+        public function createdbhaircutman($nom,$prix){
 
             global $connect_bdd;
 
@@ -56,14 +56,14 @@
 
         
         /**
-         * Update Dbhaircut "haircut"
+         * Update dbhaircutman "haircut"
          *
          * @param string $new_nom 
          * @param int $new_prix 
-         * @param int $id_livre
+         * @param int $id_haircut
          *
          */
-        public function updateDbhaircut($new_nom,$new_prix,$id_hair){
+        public function updatedbhaircutman($new_nom,$new_prix,$id_hair){
 
             global $connect_bdd;
 
